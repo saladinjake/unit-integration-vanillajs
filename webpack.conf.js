@@ -4,9 +4,9 @@ var path = require('path');
 var cwd = __dirname;
 
 module.exports = {
-  entry: './src/client.js',
+  entry: './src/app.js',
   output: {
-    filename: './static/client.js',
+    filename: './static/app.js',
   },
   module: {
     loaders: [
