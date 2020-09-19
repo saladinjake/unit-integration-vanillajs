@@ -1,10 +1,18 @@
 {
   "name": "unittest-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "unit test and integration test with web driver webpack mocha selenium driver ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "global-install": "npm i --global selenium-standalone@5.0.0 http-server@0.9.0 && selenium-standalone install",
+    "server": "http-server ./static -p 8888 -c-1",
+    "build": "webpack --config webpack.conf.js",
+    "build-dev": "npm run server & webpack --config webpack.conf.js --watch",
+    "start-selenium-server": "selenium-standalone start",
+    "test": "npm run integration-test && npm run unit-test",
+    "unit-test": "karma start karma.conf.js --single-run --no-auto-watch",
+    "unit-test-background": "karma start karma.conf.js",
+    "integration-test": "wdio ./wdio.conf.js"
   },
   "keywords": [
     "webdriver",
