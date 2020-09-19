@@ -9,10 +9,10 @@ function karmaConfig(configuration) {
     browsers: ['Chrome'],
     colors: true,
     preprocessors: {
-      'test/unit/**/*.js': ['webpack'],
+      'tests/unit/**/*.js': ['webpack'],
     },
     files: [
-      'test/unit/**/*.spec.js'
+      'tests/unit/**/*.spec.js'
     ],
     frameworks: [
       'mocha',
